@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tsl.eduunenter.mapper.UcenterMemberMapper">
+
+    <!-- 查询某天的注册人数 #{day}一个参数的时候，括号里面随便写，如果是两个参数，那么就要写参数的下标，0,1,2...-->
+    <select id="countRegister" resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM ucenter_member uc
+        WHERE DATE(uc.gmt_create)=#{day}
+    </select>
+</mapper>
