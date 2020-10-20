@@ -3,6 +3,7 @@ package com.tsl.msmservice.controller;
 import com.tsl.commonutils.Result;
 import com.tsl.msmservice.service.msmService;
 import com.tsl.msmservice.utils.RandomUtil;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.util.StringUtils;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-
+@Api(description = "短信服务")
 @RestController
 @RequestMapping("edumsm/msm")
 @CrossOrigin
